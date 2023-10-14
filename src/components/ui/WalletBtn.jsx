@@ -3,27 +3,21 @@ import { AiOutlineClose } from "react-icons/ai";
 import Wallet from "./Wallet";
 // import Wallet from "./Wallet";
 
-import logo1 from "../../assets/wallet/1.png";
-import logo2 from "../../assets/wallet/2.png";
-import logo3 from "../../assets/wallet/3.png";
-import logo4 from "../../assets/wallet/4.png";
-
+import logo1 from "../../assets/wallet/img1.svg";
+import logo2 from "../../assets/wallet/img2.svg";
+import logo3 from "../../assets/wallet/img3.svg";
 const wallets = [
   {
     image: logo1,
-    title: "ETH",
+    title: "Install MetaMask",
   },
   {
     image: logo2,
-    title: "Heco",
+    title: "Wallet Connect",
   },
   {
     image: logo3,
-    title: "BSC",
-  },
-  {
-    image: logo4,
-    title: "Polygon",
+    title: "Trust Wallet",
   },
 ];
 
@@ -60,17 +54,18 @@ export default function WalletBtn() {
                   <div
                     key={index}
                     onClick={() => setActiveWallet(index)}
-                    className={`flex items-center rounded-[4px] px-3 py-2 gap-3 ${
-                      activeWallet === index
-                        ? "border-[2px] border-[#d2555b]"
-                        : ""
+                    className={`flex cursor-pointer items-center rounded-[4px] px-3 gap-3 border-[2px] border-transparent ${
+                      activeWallet === index ? " !border-[#d2555b]" : ""
                     }`}
                   >
                     <img
                       src={item.image}
                       className="w-[24px] h-[24px] border-[1px]"
                     />
-                    <span className="text-[14px] font-medium leading-[18px] text-white">
+                    <span
+                      style={{ fontFamily: "sans-serif" }}
+                      className="text-[14px] text-center leading-[18px] text-white font-medium"
+                    >
                       {item.title}
                     </span>
                   </div>

@@ -10,9 +10,6 @@ const Wallet = ({ children, open, onClose }) => {
       onClose();
     }
   };
-
-  console.log("Rernder");
-  console.log(open);
   if (!open) return null;
   return ReactDOM.createPortal(
     <div
