@@ -9,7 +9,7 @@ import logo3 from "../../assets/wallet/img3.svg";
 const wallets = [
   {
     image: logo1,
-    title: "Install MetaMask",
+    title: "Install",
   },
   {
     image: logo2,
